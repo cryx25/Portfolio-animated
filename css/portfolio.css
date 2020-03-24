@@ -24,6 +24,7 @@
 }
 
 html {
+  font-family: "Noir";
   font-size: 62.5%;
   box-sizing: border-box;
 }
@@ -31,6 +32,11 @@ html {
 body {
   font-size: 1.5rem;
 }
+.clear-fix {
+  clear: both;
+}
+
+/* Header */
 .container {
   border: none;
   position: relative;
@@ -40,13 +46,13 @@ body {
 nav {
   width: 100%;
   display: block;
-  position: sticky;
-  text-align: right;
+  position: fixed;
   top: 0;
+  text-align: right;
   z-index: 3;
 }
 
-ul li {
+nav ul li {
   font-family: "Noir";
   font-size: 2rem;
   list-style: none;
@@ -112,6 +118,79 @@ ul li {
   animation: reveal 1s 0.5s forwards;
 }
 
+/* Header */
+
+/* Introduction */
+.intro-section {
+  width: 100vw;
+  height: 50vh;
+  color: #ffa600;
+  position: relative;
+}
+
+.intro-box {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+.intro-heading {
+  padding: 2rem 0;
+  font-size: 5rem;
+  position: relative;
+  background: linear-gradient(
+    -45deg,
+    #003f5c,
+    #58508d,
+    #bc5090,
+    #ff6361,
+    #ffa600
+  );
+  background-size: 400% 400%;
+  animation: gradient 4s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro-img {
+  width: 25%;
+  float: left;
+  margin: 5rem 2rem;
+}
+
+.intro-content {
+  padding: 2rem 0;
+  margin: 0 2rem;
+  text-align: justify;
+  color: #003f5c;
+  font-size: 2.5rem;
+  overflow: hidden;
+}
+/* Introduction */
+/* Skills*/
+.skills-section {
+  position: relative;
+  width: 100vw;
+  height: 65vh;
+}
+
+.skills-box {
+  width: 75%;
+  margin: auto;
+}
+
+.skills-img {
+  width: 10%;
+  display: block;
+  float: left;
+}
+/* Skills*/
+/* Projects*/
+.porject-section {
+  position: relative;
+  height: 50vh;
+  width: 100vw;
+}
+/* Projects */
 /* Animations */
 @keyframes reveal {
   from {
