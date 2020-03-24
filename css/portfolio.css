@@ -1,0 +1,72 @@
+@font-face {
+  src: url("fonts/azonix/Azonix.otf");
+  font-family: "Azonix";
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.5rem;
+}
+.container {
+  position: relative;
+  height: 100vh;
+}
+.portfolio-title {
+  font-family: "Azonix";
+  transform: translate(100, 50);
+  position: relative;
+  z-index: 2;
+}
+.container figure img {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: teal;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  animation: reveal 1s forwards, swing 3s ease-in-out infinite alternate-reverse;
+  mix-blend-mode: lighten;
+}
+.container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: peru;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  overflow: hidden;
+  animation: reveal 1s 0.5s forwards,
+    swing 3s ease-in-out infinite alternate-reverse;
+}
+
+/* Animations */
+@keyframes reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes swing {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotate(3deg);
+  }
+}
