@@ -1,6 +1,6 @@
 @font-face {
-  src: url("fonts/azonix/Azonix.otf");
-  font-family: "Azonix";
+  src: url("fonts/Headache-Font-OTF/Headache-Font-OTF.otf");
+  font-family: "Headache";
 }
 * {
   margin: 0;
@@ -16,40 +16,54 @@ body {
   font-size: 1.5rem;
 }
 .container {
+  border: none;
   position: relative;
   height: 100vh;
 }
 .portfolio-title {
-  font-family: "Azonix";
-  transform: translate(100, 50);
-  position: relative;
+  font-family: "Headache";
+  font-size: 10rem;
+  position: absolute;
+  top: 11.5%;
+  left: 50%;
+  background: linear-gradient(
+    -45deg,
+    #003f5c,
+    #58508d,
+    #bc5090,
+    #ff6361,
+    #ffa600
+  );
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: translate(-50%, -50%);
+  text-align: center;
   z-index: 2;
 }
 .container figure img {
   object-fit: cover;
   position: absolute;
-  top: 0;
+  top: -10%;
   left: 0;
-  background: teal;
   width: 100%;
   height: 100%;
   z-index: 1;
   opacity: 0;
-  animation: reveal 1s forwards, swing 3s ease-in-out infinite alternate-reverse;
+  animation: reveal 1s forwards;
   mix-blend-mode: lighten;
 }
 .container video {
   position: absolute;
-  top: 0;
+  top: -10%;
   left: 0;
-  background: peru;
   width: 100%;
   height: 100%;
   object-fit: cover;
   opacity: 0;
   overflow: hidden;
-  animation: reveal 1s 0.5s forwards,
-    swing 3s ease-in-out infinite alternate-reverse;
+  animation: reveal 1s 0.5s forwards;
 }
 
 /* Animations */
@@ -68,5 +82,17 @@ body {
   }
   to {
     transform: rotate(3deg);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
