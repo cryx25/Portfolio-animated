@@ -41,7 +41,7 @@ nav ul {
   position: fixed;
   min-height: 5vh;
   background: #2f4b7c;
-  z-index: 2;
+  z-index: 3;
 }
 
 nav ul li {
@@ -83,7 +83,7 @@ nav ul li {
     #ffa600
   );
   margin-top: 12rem;
-  z-index: 3;
+  z-index: 2;
   background-size: 400% 400%;
   animation: gradient 4s ease infinite;
   -webkit-background-clip: text;
